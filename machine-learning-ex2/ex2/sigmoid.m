@@ -13,7 +13,7 @@ w = q(1);
 e = q(2);
 for i = 1:w
 	for j = 1:e
-		g(i,j) = 1 / (1 + pi ^ (-z(i,j)));
+		g(i,j) = 1 / (1 + exp(-z(i,j)));
 	end
 end
 
