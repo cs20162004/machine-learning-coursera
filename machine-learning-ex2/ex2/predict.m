@@ -14,10 +14,12 @@ p = zeros(m, 1);
 %               your learned logistic regression parameters. 
 %               You should set p to a vector of 0's and 1's
 %
-if (sigmoid(theta' * X') >= 0.5)	
-	p = ones(m, 1);
+h = sigmoid(theta' * X');
+for i = 1:size(p)
+	if (h(i) >= 0.5) 
+		p(i) = 1;
+	end;
 end;
-
 
 
 
